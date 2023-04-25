@@ -13,10 +13,22 @@ int main()
         count[value]++;    
     }
 
-    for (int i = 0; i < 26; i++)
+    // for (int i = 0; i < 26; i++)
+    // {
+    //     printf("%c = %d\n", i+97, count[i]);
+    // }
+    
+    for (int i = 0; i < strlen(a); i++)
     {
-        printf("%c = %d\n", i+97, count[i]);
+        // printf("%c", a[i]);
+        int val = a[i]-97;
+        // printf("%d\n", val);
+        if(count[val]!=0){
+            printf("%c = %d\n", a[i], count[val]);
+        count[val]=0;
+        }
     }
+    
     
     
     return 0;
